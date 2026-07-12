@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="ko">
+<html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -416,7 +416,7 @@
       <div class="summary-grid">
         <div class="card dark">
           <div class="label">What it builds</div>
-          <p>리뷰에서 사이즈, 착용감, 색상/디자인, 용도, VOC 이슈를 추출하는 AI 리뷰 분석 도구.</p>
+          <p>An AI review analysis tool that extracts fit, comfort, design, use-case, and VOC signals from product reviews.</p>
         </div>
         <div class="card dark">
           <div class="label">How it works</div>
@@ -424,46 +424,15 @@
         </div>
         <div class="card dark">
           <div class="label">Key result</div>
-          <p>24개 데모 리뷰, 3개 상품, 5개 고객 세그먼트, size signal accuracy 95.8%.</p>
+          <p>24 demo reviews, 3 products, 5 customer segments, and 95.8% size-signal extraction accuracy.</p>
         </div>
         <div class="card dark wide-card">
           <div class="label">Challenge & solution</div>
-          <p>근거 없는 사이즈 추천을 막기 위해 검색된 리뷰 안에서만 답하도록 제한하고, review_id citation과 coverage check를 붙였습니다.</p>
+          <p>To reduce ungrounded size advice, the advisor answers only from retrieved review evidence and displays review_id citations with a coverage check.</p>
         </div>
         <div class="card dark">
-          <div class="label">Next steps</div>
-          <p>대규모 first-party 리뷰, 반품/CS 데이터, 상품 카탈로그를 연결해 VOC drift를 운영 지표로 확장.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="slide split">
-    <div class="left-panel">
-      <div class="topline"><span>01</span><span>Problem</span></div>
-      <div>
-        <h2>Reviews contain the signal, but the signal is buried.</h2>
-        <p class="subtitle">사이즈, 발볼, 착용감, 디자인, 용도, 품질 이슈가 자유 텍스트 안에 섞여 있어 고객과 내부 담당자 모두 빠르게 판단하기 어렵습니다.</p>
-      </div>
-      <div class="pill">consumer + merchandiser</div>
-    </div>
-    <div class="content">
-      <div class="grid-2" style="margin-top:0.3in;">
-        <div class="card">
-          <h3>Consumer friction</h3>
-          <p>“정사이즈로 사도 될까?”, “발볼 넓으면 괜찮을까?”, “출퇴근용으로 오래 신어도 편할까?” 같은 질문을 리뷰에서 직접 찾아야 합니다.</p>
-        </div>
-        <div class="card">
-          <h3>Operational friction</h3>
-          <p>핏 불만, 내구성, 배송/포장, 가격 저항 같은 VOC를 사람이 읽고 분류해야 하며, PDP 개선 액션으로 연결되기 어렵습니다.</p>
-        </div>
-        <div class="card">
-          <h3>Data challenge</h3>
-          <p>리뷰는 짧고 비정형이며 한 문장 안에 긍정, 부정, 사용 맥락이 함께 나타납니다.</p>
-        </div>
-        <div class="card">
-          <h3>AI opportunity</h3>
-          <p>LLM으로 리뷰를 구조화하고, 검색/집계/클러스터링을 통해 고객 경험과 운영 의사결정을 동시에 지원합니다.</p>
+          <div class="label">Limitations & next steps</div>
+          <p>The current demo uses curated sample reviews. The next step is connecting first-party reviews, returns, CS data, and product catalog signals.</p>
         </div>
       </div>
     </div>
@@ -471,20 +440,77 @@
 
   <section class="slide">
     <div class="content">
-      <div class="topline"><span>02</span><span>Product Concept</span></div>
+      <div class="topline"><span>02</span><span>Demo Video</span></div>
+      <h2 style="margin-top:0.35in;">Recorded product demo is submitted separately.</h2>
+      <p class="subtitle" style="max-width:10.3in;">The accompanying video demonstrates the working prototype end to end within three minutes: fit advice, review-grounded evidence, merchandising dashboard, product comparison, segmentation, trend view, and validation.</p>
+      <div class="grid-3" style="margin-top:0.48in;">
+        <div class="card" style="min-height:3.35in;">
+          <div class="label">Demo scenario</div>
+          <h3>Samba OG fit question</h3>
+          <p>Product: Samba OG<br>Usual size: 260<br>Width: wide<br>Question: “Can I buy my regular size?”</p>
+        </div>
+        <div class="card" style="min-height:3.35in;">
+          <div class="label">What the video shows</div>
+          <h3>Working AI flow</h3>
+          <p>Review retrieval, LLM answer generation, cited evidence, dashboard charts, business action recommendations, review clusters, and validation metrics.</p>
+        </div>
+        <div class="card" style="min-height:3.35in;">
+          <div class="label">Runtime</div>
+          <h3>Under 3 minutes</h3>
+          <p>The video is provided as a separate attachment so the presentation remains lightweight and portable.</p>
+        </div>
+      </div>
+      <div class="band"><span>Demo video file attached separately</span><span>Suggested file name: adiFit_demo.mp4</span></div>
+    </div>
+  </section>
+
+  <section class="slide split">
+    <div class="left-panel">
+      <div class="topline"><span>03</span><span>Problem</span></div>
+      <div>
+        <h2>Reviews contain the signal, but the signal is buried.</h2>
+        <p class="subtitle">Fit, width, comfort, design, use cases, and quality issues are mixed inside free-text reviews, making them hard for both shoppers and internal teams to interpret quickly.</p>
+      </div>
+      <div class="pill">consumer + merchandiser</div>
+    </div>
+    <div class="content">
+      <div class="grid-2" style="margin-top:0.3in;">
+        <div class="card">
+          <h3>Consumer friction</h3>
+          <p>Shoppers need to manually scan reviews to answer questions such as “Will this fit true to size?” or “Is it comfortable for commuting?”</p>
+        </div>
+        <div class="card">
+          <h3>Operational friction</h3>
+          <p>Fit complaints, durability concerns, delivery issues, and price resistance are difficult to categorize and turn into PDP actions.</p>
+        </div>
+        <div class="card">
+          <h3>Data challenge</h3>
+          <p>Reviews are short, informal, and often contain positive feedback, negative feedback, and usage context in the same sentence.</p>
+        </div>
+        <div class="card">
+          <h3>AI opportunity</h3>
+          <p>LLMs can structure review signals, while retrieval, aggregation, clustering, and trend views make those signals usable.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide">
+    <div class="content">
+      <div class="topline"><span>04</span><span>Product Concept</span></div>
       <h2 style="margin-top:0.35in;">One analysis engine, two practical interfaces.</h2>
       <div class="grid-2" style="margin-top:0.48in;">
         <div class="card" style="min-height:3.9in;">
           <div class="label">For consumers</div>
           <h3>Grounded Fit Advisor</h3>
-          <p>사용자의 평소 사이즈, 발볼, 질문을 입력하면 관련 리뷰를 검색하고, 근거 인용과 함께 사이즈 조언을 생성합니다.</p>
-          <div class="quote" style="margin-top:0.34in;">“평소 260 신고 발볼 넓은데 정사이즈로 사도 될까요?”</div>
+          <p>Users provide their usual size, width context, and question. The app retrieves relevant reviews and generates size advice with cited evidence.</p>
+          <div class="quote" style="margin-top:0.34in;">“I usually wear 260 and have wide feet. Can I buy my regular size?”</div>
         </div>
         <div class="card" style="min-height:3.9in;">
           <div class="label">For teams</div>
           <h3>Merchandiser VOC Dashboard</h3>
-          <p>상품별 사이즈 신호, 착용감, 디자인/색상, 주요 VOC 이슈, 세그먼트, 월별 트렌드를 시각화하고 PDP 개선 액션으로 연결합니다.</p>
-          <div class="quote" style="margin-top:0.34in;">“Samba OG: 발볼/사이즈업 리스크가 반복됩니다.”</div>
+          <p>The dashboard visualizes size signals, comfort, design, key VOC issues, customer segments, and monthly trends for product-page decisions.</p>
+          <div class="quote" style="margin-top:0.34in;">“Samba OG shows repeated wide-foot and size-up risk.”</div>
         </div>
       </div>
       <div class="band"><span>adiFit</span><span>review → signal → decision</span></div>
@@ -493,7 +519,7 @@
 
   <section class="slide">
     <div class="content">
-      <div class="topline"><span>03</span><span>Architecture</span></div>
+      <div class="topline"><span>05</span><span>Architecture</span></div>
       <h2 style="margin-top:0.35in;">A lightweight pipeline designed for a working prototype.</h2>
       <div class="flow">
         <div class="step" data-step="1">
@@ -524,13 +550,13 @@
         </div>
       </div>
       <div class="footer-note">Stack: Python, Streamlit, Gemini, Pydantic, Plotly, scikit-learn</div>
-      <div class="slide-num">03</div>
+      <div class="slide-num">05</div>
     </div>
   </section>
 
   <section class="slide split">
     <div class="left-panel">
-      <div class="topline"><span>04</span><span>Extraction</span></div>
+      <div class="topline"><span>06</span><span>Extraction</span></div>
       <div>
         <h2>Unstructured reviews become reusable product signals.</h2>
         <p class="subtitle">The schema keeps the LLM output consistent across retrieval, aggregation, visualization, and evaluation.</p>
@@ -563,12 +589,12 @@
 
   <section class="slide">
     <div class="content">
-      <div class="topline"><span>05</span><span>Fit Advisor</span></div>
+      <div class="topline"><span>07</span><span>Fit Advisor</span></div>
       <h2 style="margin-top:0.35in;">Answers are generated from retrieved review evidence, not general guesses.</h2>
       <div class="grid-3" style="margin-top:0.44in;">
         <div class="card">
           <div class="label">Input</div>
-          <p>Product: Samba OG<br>Usual size: 260<br>Width: wide<br>Question: 정사이즈로 사도 될까요?</p>
+          <p>Product: Samba OG<br>Usual size: 260<br>Width: wide<br>Question: Can I buy my regular size?</p>
         </div>
         <div class="card">
           <div class="label">Retrieval</div>
@@ -580,18 +606,18 @@
         </div>
       </div>
       <div class="quote" style="margin-top:0.42in;">Recommended response pattern: size up for wide feet, with review_id citations and caveats for fit risk.</div>
-      <div class="slide-num">05</div>
+      <div class="slide-num">07</div>
     </div>
   </section>
 
   <section class="slide">
     <div class="content">
-      <div class="topline"><span>06</span><span>Dashboard</span></div>
+      <div class="topline"><span>08</span><span>Dashboard</span></div>
       <h2 style="margin-top:0.35in;">Review analysis is translated into merchandising actions.</h2>
       <div class="grid-2" style="margin-top:0.46in;">
         <div class="card">
           <h3>Product-level insight</h3>
-          <p>리뷰 수, 평균 평점, 사이즈 결론, 발볼 결론, 속성별 감성, 사이즈 신호 분포, 상위 이슈를 한 화면에서 확인합니다.</p>
+          <p>The dashboard shows review count, average rating, size verdict, width verdict, aspect sentiment, size-signal distribution, and top issues in one view.</p>
           <div class="bars">
             <div class="bar-item"><span>Samba OG fit risk</span><div class="bar-track"><div class="bar-fill" style="width:100%;"></div></div><span>100%</span></div>
             <div class="bar-item"><span>Adizero fit risk</span><div class="bar-track"><div class="bar-fill" style="width:75%;"></div></div><span>75%</span></div>
@@ -613,7 +639,7 @@
 
   <section class="slide split">
     <div class="left-panel">
-      <div class="topline"><span>07</span><span>Segments</span></div>
+      <div class="topline"><span>09</span><span>Segments</span></div>
       <div>
         <h2>Clustering separates review patterns into usage segments.</h2>
         <p class="subtitle">Embeddings create clusters; structured tags explain the clusters in business language.</p>
@@ -622,10 +648,10 @@
     </div>
     <div class="content">
       <div class="grid-2" style="margin-top:0.24in;">
-        <div class="card"><h3>Comfort-driven Buyers</h3><p>쿠션, 반발력, 장시간 착용 편안함 중심.</p></div>
-        <div class="card"><h3>Wide-foot Fit Risk</h3><p>발볼 넓음, 조임, 사이즈업, 교환/환불 위험 중심.</p></div>
-        <div class="card"><h3>Performance Runners</h3><p>러닝, 대회, 기록, 반발력, 경량성 중심.</p></div>
-        <div class="card"><h3>Post-purchase VOC Risk</h3><p>내구성, 배송/포장, 가격 저항 같은 구매 후 이슈 중심.</p></div>
+        <div class="card"><h3>Comfort-driven Buyers</h3><p>Reviews focused on cushioning, responsiveness, and long-wear comfort.</p></div>
+        <div class="card"><h3>Wide-foot Fit Risk</h3><p>Reviews focused on wide feet, tight fit, size-up needs, exchanges, and refund risk.</p></div>
+        <div class="card"><h3>Performance Runners</h3><p>Reviews focused on running, racing, record goals, responsiveness, and lightweight performance.</p></div>
+        <div class="card"><h3>Post-purchase VOC Risk</h3><p>Reviews focused on durability, delivery/packaging, and price resistance after purchase.</p></div>
       </div>
       <p class="muted" style="margin-top:0.34in;">At larger scale, the same approach can detect customer segment drift and emerging product issues over time.</p>
     </div>
@@ -633,7 +659,7 @@
 
   <section class="slide">
     <div class="content">
-      <div class="topline"><span>08</span><span>Trend</span></div>
+      <div class="topline"><span>10</span><span>Trend</span></div>
       <h2 style="margin-top:0.35in;">Monthly VOC tags make issue movement visible.</h2>
       <div class="grid-2" style="margin-top:0.42in;">
         <div>
@@ -667,7 +693,7 @@
 
   <section class="slide">
     <div class="content">
-      <div class="topline"><span>09</span><span>Validation</span></div>
+      <div class="topline"><span>11</span><span>Validation</span></div>
       <h2 style="margin-top:0.35in;">The prototype includes a lightweight validation layer.</h2>
       <div class="metric-row">
         <div class="metric"><strong>24</strong><span>review samples</span></div>
@@ -691,7 +717,7 @@
 
   <section class="slide black">
     <div class="content">
-      <div class="topline"><span>10</span><span>Roadmap</span></div>
+      <div class="topline"><span>12</span><span>Roadmap</span></div>
       <h2 style="margin-top:0.45in; max-width:10.5in;">From prototype to operational review intelligence.</h2>
       <div class="grid-3" style="margin-top:0.55in;">
         <div class="card dark">
