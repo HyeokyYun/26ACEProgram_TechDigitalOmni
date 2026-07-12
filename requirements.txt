@@ -6,4 +6,3 @@ plotly>=5.24
 scikit-learn>=1.5
 python-dotenv>=1.0
 pydantic>=2.9
-python-pptx>=1.0

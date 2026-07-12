@@ -59,6 +59,12 @@ GEMINI_API_KEY=your-api-key
 streamlit run app.py
 ```
 
+## Deliverables
+
+- Presentation PDF: `submission/adiFit_presentation.pdf`
+- Presentation HTML: `submission/adiFit_presentation.html`
+- Demo video script: `submission/demo_video_script.md`
+
 ## Evaluation
 
 Current demo evaluation:
@@ -70,11 +76,3 @@ Current demo evaluation:
 - Citation coverage for tested advisor cases: 100%
 
 The citation coverage metric checks whether cited `review_id`s exist in the retrieved evidence set. It is a grounding coverage check, not a full factuality benchmark.
-
-## Presentation Positioning
-
-Use this as topic 1, `Consumer Review Analysis`.
-
-Recommended one-line description:
-
-> adiFit is an AI review intelligence tool that extracts fit, comfort, design, use-case, and VOC signals from product reviews, then provides grounded fit advice for consumers and actionable review segments for merchandisers.
